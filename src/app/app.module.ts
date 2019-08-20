@@ -12,7 +12,7 @@ import { OrderComponent } from './order/order.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 
-const mesRoutes = [
+const mesRoutes:Routes = [
   {path :'', component : CustomerListComponent},
   {path :'customers', component : CustomerListComponent},
   {path :'orders', component : OrderListComponent},
