@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DataorderService } from '../dataorder.service';
+
 
 @Component({
   selector: 'app-order-list',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent implements OnInit {
-
-  constructor() { }
-
+  @Input () order : any
+  constructor(private ordersdata : DataorderService) { }
+  orders : any;
   ngOnInit() {
+    this.orders = this.ordersdata.orders;
+    console.log (this.orders);
   }
 
 }
