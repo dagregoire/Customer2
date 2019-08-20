@@ -13,7 +13,11 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 
 const mesRoutes = [
-  {path :'', component : CustomerListComponent}
+  {path :'', component : CustomerListComponent},
+  {path :'customers', component : CustomerListComponent},
+  {path :'orders', component : OrderListComponent},
+  {path :'about', component : AboutComponent},
+  {path :'login', component : LoginComponent}
 
 ]
 
@@ -31,7 +35,8 @@ const mesRoutes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(mesRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
