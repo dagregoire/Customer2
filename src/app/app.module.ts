@@ -11,13 +11,16 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { OrderComponent } from './order/order.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
+import  { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataorderService } from './dataorder.service';
 // import { FontAwesomeModule } from './angular-fontawesome'
 
-const mesRoutes = [
+const mesRoutes:Routes = [
   {path :'', component : CustomerListComponent},
-  {path : "/order" , component : OrderListComponent}
-  
+  {path :'customers', component : CustomerListComponent},
+  {path :'orders', component : OrderListComponent},
+  {path :'about', component : AboutComponent},
+  {path :'login', component : LoginComponent}
 
 ]
 
@@ -36,7 +39,11 @@ const mesRoutes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
+    RouterModule.forRoot(mesRoutes)
   ],
   providers: [DataorderService],
   bootstrap: [AppComponent]
