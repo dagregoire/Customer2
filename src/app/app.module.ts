@@ -14,7 +14,11 @@ import { LoginComponent } from './login/login.component';
 import  { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const mesRoutes = [
-  {path :'', component : CustomerListComponent}
+  {path :'', component : CustomerListComponent},
+  {path :'customers', component : CustomerListComponent},
+  {path :'orders', component : OrderListComponent},
+  {path :'about', component : AboutComponent},
+  {path :'login', component : LoginComponent}
 
 ]
 
@@ -34,8 +38,9 @@ const mesRoutes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     
+    RouterModule.forRoot(mesRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
