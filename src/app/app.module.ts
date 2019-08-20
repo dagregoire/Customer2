@@ -15,7 +15,9 @@ import { DataorderService } from './dataorder.service';
 // import { FontAwesomeModule } from './angular-fontawesome'
 
 const mesRoutes = [
-  {path :'', component : CustomerListComponent}
+  {path :'', component : CustomerListComponent},
+  {path : "/order" , component : OrderListComponent}
+  
 
 ]
 
