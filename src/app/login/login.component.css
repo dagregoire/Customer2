@@ -1,3 +1,7 @@
 .error {
     border-left:3px solid red;
 }
+
+span {
+    font-size : 0.9rem;
+}
