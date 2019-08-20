@@ -11,6 +11,7 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { OrderComponent } from './order/order.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
+import  { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const mesRoutes = [
   {path :'', component : CustomerListComponent}
@@ -31,7 +32,10 @@ const mesRoutes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
