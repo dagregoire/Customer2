@@ -1,3 +1,15 @@
 .error {
-    border-left:3px solid red;
+    border-left:5px solid darkred;
+}
+
+.success {
+    border-left:5px solid green;
+}
+
+input {
+    width: 300px;
+}
+
+span {
+    font-size : 0.9rem;
 }

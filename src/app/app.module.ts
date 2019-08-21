@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -14,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import  { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataorderService } from './dataorder.service';
 // import { FontAwesomeModule } from './angular-fontawesome'
+import { AlertMsgDirective } from './alert-msg.directive';
 
 const mesRoutes:Routes = [
   {path :'', component : CustomerListComponent},
@@ -21,7 +23,6 @@ const mesRoutes:Routes = [
   {path :'orders', component : OrderListComponent},
   {path :'about', component : AboutComponent},
   {path :'login', component : LoginComponent}
-
 ]
 
 @NgModule({
@@ -36,13 +37,13 @@ const mesRoutes:Routes = [
     AboutComponent,
     LoginComponent,
     // FontAwesomeModule
+    AlertMsgDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    
     RouterModule.forRoot(mesRoutes)
   ],
   providers: [DataorderService],
