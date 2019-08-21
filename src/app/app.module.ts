@@ -12,9 +12,9 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { OrderComponent } from './order/order.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
-import  { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataorderService } from './dataorder.service';
-// import { FontAwesomeModule } from './angular-fontawesome'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertMsgDirective } from './alert-msg.directive';
 
 const mesRoutes:Routes = [
@@ -36,7 +36,6 @@ const mesRoutes:Routes = [
     OrderComponent,
     AboutComponent,
     LoginComponent,
-    // FontAwesomeModule
     AlertMsgDirective
   ],
   imports: [
@@ -44,6 +43,7 @@ const mesRoutes:Routes = [
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
     RouterModule.forRoot(mesRoutes)
   ],
   providers: [DataorderService],

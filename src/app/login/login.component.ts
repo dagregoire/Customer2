@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { faSuitcase } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  faSuitcase = faSuitcase;
 
   login: FormGroup = this.lg.group({
     email:['',[Validators.required, Validators.pattern("^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.(net|com|fr)$")]],
