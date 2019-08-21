@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DatacustomerService } from '../datacustomer.service';
 
 @Component({
   selector: 'app-customer',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
+  @Input() customer;
 
-  constructor() { }
+  constructor(private data: DatacustomerService) { }
 
   ngOnInit() {
   }
