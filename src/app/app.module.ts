@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -12,6 +13,7 @@ import { OrderComponent } from './order/order.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import  { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertMsgDirective } from './alert-msg.directive';
 
 const mesRoutes:Routes = [
   {path :'', component : CustomerListComponent},
@@ -19,7 +21,6 @@ const mesRoutes:Routes = [
   {path :'orders', component : OrderListComponent},
   {path :'about', component : AboutComponent},
   {path :'login', component : LoginComponent}
-
 ]
 
 @NgModule({
@@ -32,14 +33,14 @@ const mesRoutes:Routes = [
     OrderListComponent,
     OrderComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    AlertMsgDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    
     RouterModule.forRoot(mesRoutes)
   ],
   providers: [],
