@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class DatacustomerService {
-  customers = [
+customers = [
     {id:1,firstName:"Ted", lastName:"James",address:"1234 Anywhere St.",city:"Phoenix",state:"Arizona"},
     {id:2,firstName:"Michelle", lastName:"Thompson",address:"345 Cedar Point Ave.",city:"Encinitas",state:"California"},
     {id:3,firstName:"Zed", lastName:"Bishop",address:"1822 Long Bay Dr.",city:"Seattle",state:"Washington"},
@@ -28,6 +26,6 @@ export class DatacustomerService {
     {id:21,firstName:"Laurent", lastName:"Bugnion",address:"9874 Lake Blvd.",city:"Zurich",state:"Canton of Zurich"},
     {id:22,firstName:"Gabriel", lastName:"Flores",address:"2543 Cassiano",city:"Rio de Janeiro",state:"Rio de Janeiro"}
   ]
-
+tb : Array <any> = new Array;
   constructor() { }
 }

@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataorderService } from './dataorder.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertMsgDirective } from './alert-msg.directive';
+import {DatacustomerService} from './datacustomer.service';
+
 
 const mesRoutes:Routes = [
   {path :'', component : CustomerListComponent},
@@ -46,7 +48,7 @@ const mesRoutes:Routes = [
     FontAwesomeModule,
     RouterModule.forRoot(mesRoutes)
   ],
-  providers: [DataorderService],
+  providers: [DataorderService,DatacustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
