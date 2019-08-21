@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataorderService } from '../dataorder.service';
+import { DatacustomerService } from '../datacustomer.service';
 
 
 @Component({
@@ -7,13 +8,26 @@ import { DataorderService } from '../dataorder.service';
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.css']
 })
+
 export class OrderListComponent implements OnInit {
-  @Input () order : any
-  constructor(private ordersdata : DataorderService) { }
-  orders : any;
+ 
+order
+customer
+ 
+  
+  constructor(private ordersdata : DataorderService, private customerdata : DatacustomerService) { 
+    
+  
+}
+  
   ngOnInit() {
-    this.orders = this.ordersdata.orders;
-    console.log (this.orders);
+   
+    this.customer = this.customerdata.customers;
+    this.order = this.ordersdata.orders;
+       
+   
+
+    
   }
 
 }
