@@ -17,6 +17,9 @@ import { DataorderService } from './dataorder.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertMsgDirective } from './alert-msg.directive';
 import { DatacustomerService } from './datacustomer.service';
+import { CustomerMenuComponent } from './customer-menu/customer-menu.component';
+import { CustomerCardViewComponent } from './customer-card-view/customer-card-view.component';
+import { CustomerMapComponent } from './customer-map/customer-map.component';
 
 
 const mesRoutes:Routes = [
@@ -39,7 +42,10 @@ const mesRoutes:Routes = [
     OrderComponent,
     AboutComponent,
     LoginComponent,
-    AlertMsgDirective
+    AlertMsgDirective,
+    CustomerMenuComponent,
+    CustomerCardViewComponent,
+    CustomerMapComponent
   ],
   imports: [
     BrowserModule,

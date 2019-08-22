@@ -1,0 +1,18 @@
+<div class="row bg-primary text-white">
+    <span class="col title-customer">{{customer.firstName}} {{customer.lastName}}</span>
+    <a class="nav-link">
+        <fa-icon [icon]="faEdit"></fa-icon>
+    </a>
+</div>
+<div class="row">
+    <div class="col">
+        <img srcset="/assets/images/male.png" alt="personnage">
+    </div>
+    <div class="col">
+        <ul>
+            <li>{{ customer.city }},</li>
+            <li>{{ customer.state }}</li>
+            <li><a class="nav-link"> View Orders</a></li>
+        </ul>
+    </div>
+</div>

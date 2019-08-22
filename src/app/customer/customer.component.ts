@@ -8,7 +8,7 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-  @Input() customer;
+  @Input() customers;
   @Input() view:string;
   faEdit = faEdit;
 

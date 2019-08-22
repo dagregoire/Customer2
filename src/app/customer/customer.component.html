@@ -1,77 +1,38 @@
-<ng-container [ngSwitch]="view">
-    <section>
-        <div *ngSwitchCase="'list'">
-            <!-- sous header bleu avec le titre des colonnes
-         <div class="row" id="header">
-        <div id="headerImage" class="col">
-        </div>
-        <div class="col">
-            <span>First Name</span>
-        </div>
-        <div class="col">
-            <span>Last Name</span>
-        </div>
-        <div class="col">
-            <span>Address</span>
-        </div>
-        <div class="col">
-            <span>City</span>
-        </div>
-        <div class="col">
-            <span>State</span>
-        </div>
-        <div class="col">
-            <span>Total Order</span>
-        </div>
-    </div> -->
-            <div class="row">
-                <div id="image" class="col"></div>
-                <div class="col">
-                    {{customer.firstName}}
-                </div>
-                <div class="col">
-                    {{customer.lastName}}
-                </div>
-                <div class="col">
-                    {{customer.address}}
-                </div>
-                <div class="col">
-                    {{customer.city}}
-                </div>
-                <div class="col">
-                    {{customer.state}}
-                </div>
-                <div class="col">
-                    <span>Total Order</span>
-                </div>
-                <div class="col">
-                    <button>View Orders</button>
-                </div>
-            </div>
-            <hr>
-        </div>
-    </section>
-    <div *ngSwitchCase="'map'">
-        Carte google map
-    </div>
-    <div *ngSwitchDefault>
-        <div class="col-3 border">
-            <div class="row bg-primary text-white">
-                <span class="col title-customer">{{customer.firstName}} {{customer.lastName}}</span>
-                <a class="nav-link"><fa-icon [icon]="faEdit"></fa-icon></a>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <img srcset="/assets/images/male.png" alt="personnage">
-                </div>
-                <div class="col-8">
-                    <ul>
-                        <li>{{ customer.city }},</li>
-                        <li>{{ customer.state }}</li>
-                        <li><a class="nav-link"> View Orders</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</ng-container>
+<table class="table table-striped">
+    <thead>
+        <th scope="col"></th>
+        <th scope="col">Nom</th>
+        <th scope="col">prenom</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Ville</th>
+        <th scope="col">Etat</th>
+        <th scope="col">Total prix</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <th scope="row"></th>
+            <td>
+                {{customer.firstName}}
+            </td>
+            <td>
+                {{customer.lastName}}
+            </td>
+            <td>
+                {{customer.address}}
+            </td>
+            <td>
+                {{customer.city}}
+            </td>
+            <td>
+                {{customer.state}}
+            </td>
+            <td>
+                <span>Total Order</span>
+            </td>
+            <td>
+                <button>View Orders</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
