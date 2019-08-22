@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataorderService } from './dataorder.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertMsgDirective } from './alert-msg.directive';
-import {DatacustomerService} from './datacustomer.service';
+import { DatacustomerService } from './datacustomer.service';
 
 
 const mesRoutes:Routes = [
@@ -24,7 +24,8 @@ const mesRoutes:Routes = [
   {path :'customers', component : CustomerListComponent},
   {path :'orders', component : OrderListComponent},
   {path :'about', component : AboutComponent},
-  {path :'login', component : LoginComponent}
+  {path :'login', component : LoginComponent},
+  {path :'customers/:id/edit', component :CustomerAddFormComponent}
 ]
 
 @NgModule({
