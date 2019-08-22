@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DatacustomerService } from '../datacustomer.service';
+import { faIdCard } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-customer-list',
@@ -7,7 +10,11 @@ import { DatacustomerService } from '../datacustomer.service';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-  customers
+  customers;
+  faIdCard = faIdCard;
+  faBars = faBars;
+  faPlus = faPlus;
+
   constructor(private data:DatacustomerService) { }
 
   ngOnInit() {
