@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-
+import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -17,6 +17,7 @@ import { DataorderService } from './dataorder.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertMsgDirective } from './alert-msg.directive';
 import {DatacustomerService} from './datacustomer.service';
+
 
 
 const mesRoutes:Routes = [
@@ -38,7 +39,8 @@ const mesRoutes:Routes = [
     OrderComponent,
     AboutComponent,
     LoginComponent,
-    AlertMsgDirective
+    AlertMsgDirective,
+    
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ const mesRoutes:Routes = [
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    RouterModule.forRoot(mesRoutes)
+    RouterModule.forRoot(mesRoutes),
+    HttpClientModule
   ],
   providers: [DataorderService,DatacustomerService],
   bootstrap: [AppComponent]

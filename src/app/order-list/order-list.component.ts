@@ -10,24 +10,21 @@ import { DatacustomerService } from '../datacustomer.service';
 })
 
 export class OrderListComponent implements OnInit {
- 
-order
+
+
 customer
- 
+
   
   constructor(private ordersdata : DataorderService, private customerdata : DatacustomerService) { 
+    this.customer = this.customerdata.customers;
+    
+   
     
   
 }
   
   ngOnInit() {
-   
-    this.customer = this.customerdata.customers;
-    this.order = this.ordersdata.orders;
-       
-   
+ 
 
-    
   }
-
 }

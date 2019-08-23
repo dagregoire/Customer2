@@ -1,29 +1,31 @@
 
     <div class="row">
          <div class="offset-2 col-4">
-               <h4>{{this.customer.firstName}}{{this.customer.lastName}}</h4>
+               <h4>{{this.customer.firstName}} {{this.customer.lastName}} {{this.customer.id}}</h4>
            </div>
        
        </div>
     
     <div class="row" >
+            <table class="table">
+                    <tr *ngIf = "!noOrder" >
+                       
+                        <td  >
+                            <div class="row">
+                                <div class="offset-2 col-4">
+                                    <span>{{this.order.product}}</span>
+                                </div>
+                                <div class="col-4">
+                                    <span>{{this.order.productprix}}</span>
+                                </div>
+                            </div>
+                        </td>
+                      
+                </tr>
             
-        <table class="table">
-                <tr >
-                    <td>
-                        <div class="row">
-                            <div class="offset-2 col-4">
-                                <span>produit</span>
-                            </div>
-                            <div class="col-4">
-                                <span>prix</span>
-                            </div>
-                        </div>
-                    </td>
-            </tr>
-
-        </table>
-    </div>
+            </table>
+            
+                
 <!-- </section> -->
 
     

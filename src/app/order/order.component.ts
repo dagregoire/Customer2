@@ -1,6 +1,8 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { DataorderService } from '../dataorder.service';
 import { DatacustomerService } from '../datacustomer.service';
+import {HttpClient} from '@angular/common/http';
+import { OrderModel } from "../models/order.model";
 
 
 @Component({
@@ -10,25 +12,30 @@ import { DatacustomerService } from '../datacustomer.service';
 })
 export class OrderComponent implements OnInit {
 @Input () customer
-order
-idOrder :number = undefined
-
-
-
-
-
-  constructor(private dataorder : DataorderService,private customers : DatacustomerService) {
-    this.order = this.dataorder.orders
-    
-   }
-
-  ngOnInit() {
-   
-    console.log (this.customer)
-    console.log (this.order)
-    console.log (this.idOrder)
-  
-    
+customerOrdersProduct
+customerOrdersPrice
+noOrder = false
+thisCustomer
+order:OrderModel
+  constructor(private http : HttpClient,private orderdata : DataorderService,) {
   }
 
+  ngOnInit() {
+     
+        this.thisCustomer = this.customer.id
+        console.log (this.thisCustomer)
+        this.findOrder ()
+        console.log (this.order)
+  }
+  findOrder = () => {
+    this.orderdata.getApi('getOrder/'+this.thisCustomer).subscribe((res:any)=> {
+      if(res.error){
+        this.noOrder = true;
+        
+      }
+      else {
+        this.order =res.order;
+      }
+    })
 }
+}  
