@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-edit-panel.component.css']
 })
 export class CustomerEditPanelComponent implements OnInit {
+  displayView:String = "detail";
 
   constructor() { }
 
