@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import {RouterModule, Routes} from '@angular/router';
+import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -21,6 +21,7 @@ import { CustomerMenuComponent } from './customer-menu/customer-menu.component';
 import { CustomerCardViewComponent } from './customer-card-view/customer-card-view.component';
 import { CustomerMapComponent } from './customer-map/customer-map.component';
 import { CustomerMenuEditComponent } from './customer-menu-edit/customer-menu-edit.component';
+
 
 
 const mesRoutes:Routes = [
@@ -55,7 +56,8 @@ const mesRoutes:Routes = [
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    RouterModule.forRoot(mesRoutes)
+    RouterModule.forRoot(mesRoutes),
+    HttpClientModule
   ],
   providers: [DataorderService,DatacustomerService],
   bootstrap: [AppComponent]
