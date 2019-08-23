@@ -21,6 +21,7 @@ import { CustomerMenuComponent } from './customer-menu/customer-menu.component';
 import { CustomerCardViewComponent } from './customer-card-view/customer-card-view.component';
 import { CustomerMapComponent } from './customer-map/customer-map.component';
 import { CustomerMenuEditComponent } from './customer-menu-edit/customer-menu-edit.component';
+import { CustomerEditPanelComponent } from './customer-edit-panel/customer-edit-panel.component';
 
 
 
@@ -30,7 +31,9 @@ const mesRoutes:Routes = [
   {path :'orders', component : OrderListComponent},
   {path :'about', component : AboutComponent},
   {path :'login', component : LoginComponent},
-  {path :'customers/:id/edit', component :CustomerAddFormComponent}
+  {path :'customers/:id/edit', component :CustomerEditPanelComponent},
+  {path :'customers/:id/order', component :OrderListComponent},
+  {path :'customers/:id/detail', component : CustomerListComponent}
 ]
 
 @NgModule({
@@ -48,7 +51,8 @@ const mesRoutes:Routes = [
     CustomerMenuComponent,
     CustomerCardViewComponent,
     CustomerMapComponent,
-    CustomerMenuEditComponent
+    CustomerMenuEditComponent,
+    CustomerEditPanelComponent
   ],
   imports: [
     BrowserModule,
