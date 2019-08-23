@@ -20,6 +20,7 @@ import { DatacustomerService } from './datacustomer.service';
 import { CustomerMenuComponent } from './customer-menu/customer-menu.component';
 import { CustomerCardViewComponent } from './customer-card-view/customer-card-view.component';
 import { CustomerMapComponent } from './customer-map/customer-map.component';
+import { CustomerMenuEditComponent } from './customer-menu-edit/customer-menu-edit.component';
 
 
 const mesRoutes:Routes = [
@@ -45,7 +46,8 @@ const mesRoutes:Routes = [
     AlertMsgDirective,
     CustomerMenuComponent,
     CustomerCardViewComponent,
-    CustomerMapComponent
+    CustomerMapComponent,
+    CustomerMenuEditComponent
   ],
   imports: [
     BrowserModule,

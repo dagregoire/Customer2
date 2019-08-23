@@ -3,7 +3,7 @@
     <fa-icon [icon]="faUser"></fa-icon>Customers
   </h2>
   <app-customer-menu (t)="changeView($event)"></app-customer-menu>
-  <!-- Separation en 3 composants + 1 pour le card view  -->
+  
   <ng-container [ngSwitch]="t">
     <div *ngSwitchCase="'list'">
       <app-customer [customers]="customers"></app-customer>
