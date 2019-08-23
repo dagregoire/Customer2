@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { faSuitcase } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-customer-add-form',
@@ -7,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./customer-add-form.component.css']
 })
 export class CustomerAddFormComponent  {
+  faSuitcase = faSuitcase;
 
 
   addForm: FormGroup = this.add.group({

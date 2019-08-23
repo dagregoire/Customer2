@@ -1,0 +1,17 @@
+<div class="container">
+    <app-customer-menu-edit></app-customer-menu-edit>
+
+    <ng-container [ngSwitch]="displayView">
+        <div *ngSwitchCase="detail">
+            <app-customer-detail></app-customer-detail>
+        </div>
+        <div *ngSwitchCase="order">
+
+        </div>
+        <div *ngSwitchDefault>
+            <app-customer-add-form></app-customer-add-form>
+        </div>
+    </ng-container>
+
+
+</div>

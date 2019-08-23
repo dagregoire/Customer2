@@ -1,19 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-light mb-4">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link">
-            <fa-icon [icon]="faIdCard"></fa-icon> Detail
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">
-            <fa-icon [icon]="faBars"></fa-icon> Order
-          </a>
-        </li>
-        <li class="nav-item">
-            <fa-icon [icon]="faPlus"></fa-icon> Edit Customer
-        </li>
-      </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/customers/{{ id }}/detail">
+                    <fa-icon [icon]="faIdCard"></fa-icon> Customer Detail
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/customers/{{ id }}/order">
+                    <fa-icon [icon]="faBars"></fa-icon> Customer Order
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/customers/{{ id }}/edit">
+                    <fa-icon [icon]="faPlus"></fa-icon> Edit Customer
+                </a>
+            </li>
+        </ul>
     </div>
-  </nav>
+</nav>
