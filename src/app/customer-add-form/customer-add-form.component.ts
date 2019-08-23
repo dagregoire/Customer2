@@ -14,7 +14,7 @@ export class CustomerAddFormComponent  {
   addForm: FormGroup = this.add.group({
     firstName:['',[Validators.required, Validators.pattern("^[a-zA-Z]+$"), Validators.minLength(3)]],
     lastName:['', [Validators.required, Validators.pattern("^[a-zA-Z]+$"), Validators.minLength(3)]],
-    address:['', [Validators.required, Validators.pattern("^[0-9]+[a-zA-Z._-]+$")]],
+    address:['', [Validators.required, Validators.pattern("^[0-9]+[a-zA-Z ._-]+$")]],
     city:['', [Validators.required, Validators.pattern("^[a-zA-Z]+$"), Validators.minLength(4)]],
     state:['', [Validators.required]],
 
